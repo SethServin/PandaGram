@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Profile Picture -->
+    <ImageView
+        android:id="@+id/profilePic"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/pandapfp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"/>
+
+    
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bambooking"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="@id/profilePic"
+        app:layout_constraintStart_toEndOf="@id/profilePic"
+        android:layout_marginStart="24dp"/>
+
+
+    <TextView
+        android:id="@+id/stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="250 Posts    2.3K Followers    500 Following"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/username"
+        app:layout_constraintStart_toStartOf="@id/username"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Display Name -->
+    <TextView
+        android:id="@+id/displayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🐼 Bamboo King"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/stats"
+        app:layout_constraintStart_toStartOf="@id/stats"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Bio -->
+    <TextView
+        android:id="@+id/bio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Professional bamboo enthusiast 🎋&#10;Living my best panda life 🐼"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/displayName"
+        app:layout_constraintStart_toStartOf="@id/displayName"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Highlights Label -->
+    <TextView
+        android:id="@+id/highlights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bamboo • Naps • Snacks • Zoo"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/profilePic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Divider -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#CCCCCC"
+        app:layout_constraintTop_toBottomOf="@id/highlights"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Posts Label -->
+    <TextView
+        android:id="@+id/postsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="POSTS"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Main Post -->
+    <ImageView
+        android:id="@+id/postImage"
+        android:layout_width="320dp"
+        android:layout_height="280dp"
+        android:src="@drawable/pandapost"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/postsLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Likes -->
+    <TextView
+        android:id="@+id/likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="❤️ 1,248 Likes"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/postImage"
+        app:layout_constraintStart_toStartOf="@id/postImage"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Caption -->
+    <TextView
+        android:id="@+id/caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Having a great day eating bamboo! 🎋 #PandaLife #PandaGram"
+        app:layout_constraintTop_toBottomOf="@id/likes"
+        app:layout_constraintStart_toStartOf="@id/postImage"
+        app:layout_constraintEnd_toEndOf="@id/postImage"
+        android:layout_marginTop="4dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
